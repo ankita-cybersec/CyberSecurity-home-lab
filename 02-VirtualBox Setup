@@ -1,0 +1,94 @@
+# 02 - VirtualBox Setup
+
+## 1. Install VirtualBox
+
+Install Oracle VirtualBox on the host system.
+
+Official download:
+https://www.virtualbox.org/wiki/Downloads
+
+## 2. Create Kali Linux VM
+
+### Recommended Configuration
+
+- Name: Kali-Linux
+- Type: Linux
+- Version: Debian (64-bit)
+- RAM: 4–8 GB
+- CPU: 2–4 cores
+- Storage: 30–40 GB
+- Network Adapter 1: NAT
+
+### Installation
+
+1. Create a new virtual machine.
+2. Select the downloaded Kali Linux ISO.
+3. Allocate the recommended resources.
+4. Complete the Kali Linux installation.
+5. Verify that Kali boots successfully.
+
+---
+
+## 3. Create Windows VM
+
+### Recommended Configuration
+
+- Name: Win11-LAB
+- Type: Microsoft Windows
+- Version: Windows 11 (64-bit)
+- RAM: 4 GB minimum
+- CPU: 2–4 cores
+- Storage: ~30 GB minimum for this basic lab
+- Network Adapter 1: NAT
+
+### Installation
+
+1. Create a new virtual machine.
+2. Select the Windows ISO.
+3. Allocate the recommended resources.
+4. Complete the Windows installation.
+5. Verify that Windows boots successfully.
+
+---
+
+## 4. Network Adapters
+
+After both operating systems are installed, configure a second
+network adapter on each VM.
+
+### Adapter 1
+
+- Attached to: NAT
+- Purpose: Internet connectivity
+
+### Adapter 2
+
+- Attached to: Internal Network
+- Network Name: `SOC-LAB`
+- Purpose: Isolated communication between lab VMs
+
+The detailed configuration of the internal network is covered in:
+
+[03-Network-Configuration](../03-Network-Configuration/README.md)
+
+---
+
+## 5. VM Storage
+
+Store the virtual machines on a drive with sufficient free space.
+
+Dynamic virtual disks can grow as the guest operating system uses more
+storage, so the host system must have enough free space available.
+
+---
+
+## 6. Verification
+
+Before continuing:
+
+- [ ] Kali boots successfully
+- [ ] Windows boots successfully
+- [ ] Both VMs have sufficient allocated resources
+- [ ] Adapter 1 is configured as NAT
+- [ ] Adapter 2 is configured as an Internal Network
+- [ ] Both VMs use the same Internal Network name
