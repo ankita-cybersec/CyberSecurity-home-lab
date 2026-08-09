@@ -1,0 +1,32 @@
+# Requirements
+
+## Hardware Requirements
+    - 16 GB RAM recommended
+    - ~60–80 GB free storage recommended
+    - x64 processor with virtualization support
+
+## Software Requirements
+    - VirtualBox - Used for VM virtualization 
+    ( https://www.virtualbox.org/wiki/Downloads ) 
+    - Kali Linux ISO Used as Attack/Testing machine
+    (https://www.kali.org/get-kali/kali-installer-images )
+    - Windows 10&11 ISO Used as Target/Monitored Endpoint 
+    (https://www.microsoft.com/en-us/software-download/windows11)
+
+## Objectives: 
+The lab requires two VMs so that one can act as attack/simulation 
+machine while other acts as target endpoint.
+
+In this setup : 
+- Kali Linux is used to generate controlled security activity,
+- Windows acts as the monitored endpoint where security events and
+  logs are generated. 
+
+This environment can be used to practice attack simulation, security
+monitoring, log analysis, detection, and incident investigation.
+
+## Planned network architecture
+ Each VM uses two network adapters:
+    - Adapter 1 - NAT (provides internet access for updates, installation and downloading)
+    - Adapter 2 - Internal Network : Creates an isolated communication channels between VMs)
+
